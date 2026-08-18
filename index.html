@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Imkoniyatlar Kengligi — AI Hamrohligida Inklyuziv Ish Topish Milliy Portali</title>
+  <meta name="description" content="Nogironligi bor shaxslar uchun AI hamrohligida to'siqsiz ish topish, rezyume skanerlash, real-vaqt tarjimon va 100% qulay ish o'rinlari ekotizimi. WCAG 2.1 AA standartlariga to'liq mos.">
+  <meta name="keywords" content="inklyuziv ish, nogironlik, masofaviy ish, AI rezyume tahlili, accessibility, WCAG 2.1 AA, O'zbekiston">
+  <meta name="author" content="Imkoniyatlar Kengligi Enterprise">
+
+  <!-- Design System & Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Asosiy kontentga o'tish (Skip to content)</a>
+
+  <!-- Header & Navigation -->
+  <div id="navbar-mount"></div>
+
+  <!-- Main Content Gateway -->
+  <main id="main-content" class="main-content" role="main" tabindex="-1">
+    <div id="landing-mount"></div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <div id="footer-mount"></div>
+
+  <!-- Core Infrastructure Scripts -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/a11y-engine.js"></script>
+  <script src="assets/js/core/ai-simulator.js"></script>
+  
+  <!-- UI Components -->
+  <script src="assets/js/components/auth.js"></script>
+  <script src="assets/js/components/toolbar.js"></script>
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/landing.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('navbar-mount').innerHTML = window.NavbarComponent.render('index');
+      document.getElementById('landing-mount').innerHTML = window.LandingComponent.render();
+      document.getElementById('footer-mount').innerHTML = window.FooterComponent.render();
+      if (window.LandingComponent.init3D) {
+        window.LandingComponent.init3D();
+      }
+    });
+  </script>
+
+</body>
+</html>

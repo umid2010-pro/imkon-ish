@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Ijtimoiy Ta'sir Telemetriyasi & BMT SDG — Imkoniyatlar Kengligi</title>
+  <meta name="description" content="BMT SDG 8 & 10 standartlari bo'yicha inklyuziv bandlik, iqtisodiy o'sish va teng imkoniyatlar jonli telemetriyasi.">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Asosiy kontentga o'tish (Skip to content)</a>
+
+  <!-- Header & Navigation -->
+  <div id="navbar-mount"></div>
+
+  <!-- Main Content Mount -->
+  <main id="main-content" class="main-content" role="main" tabindex="-1">
+    <div id="analytics-mount"></div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <div id="footer-mount"></div>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/a11y-engine.js"></script>
+  <script src="assets/js/core/ai-simulator.js"></script>
+  
+  <!-- Components -->
+  <script src="assets/js/components/auth.js"></script>
+  <script src="assets/js/components/toolbar.js"></script>
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/analytics.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('navbar-mount').innerHTML = window.NavbarComponent.render('analytics');
+      document.getElementById('analytics-mount').innerHTML = window.AnalyticsComponent.render();
+      document.getElementById('footer-mount').innerHTML = window.FooterComponent.render();
+    });
+  </script>
+
+</body>
+</html>

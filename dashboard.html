@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>AI Nomzod Markazi & Rezyume Tahlili — Imkoniyatlar Kengligi</title>
+  <meta name="description" content="AI Lazerli CV Skaner, ATS optimizatsiyasi, ovozli intervyu trenajyori va arizalar pipeline boshqaruv markazi.">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Asosiy kontentga o'tish (Skip to content)</a>
+
+  <!-- Header & Navigation -->
+  <div id="navbar-mount"></div>
+
+  <!-- Main Content Mount -->
+  <main id="main-content" class="main-content" role="main" tabindex="-1">
+    <div id="dashboard-mount"></div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <div id="footer-mount"></div>
+
+  <!-- Core Scripts -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/a11y-engine.js"></script>
+  <script src="assets/js/core/ai-simulator.js"></script>
+  
+  <!-- Components -->
+  <script src="assets/js/components/auth.js"></script>
+  <script src="assets/js/components/toolbar.js"></script>
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/dashboard.js"></script>
+  <script src="assets/js/components/employers.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('navbar-mount').innerHTML = window.NavbarComponent.render('dashboard');
+      document.getElementById('dashboard-mount').innerHTML = window.DashboardComponent.render();
+      document.getElementById('footer-mount').innerHTML = window.FooterComponent.render();
+    });
+  </script>
+
+</body>
+</html>
